@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  @apply bg-nsk-bg text-nsk-ink font-body antialiased;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2530; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3340; }
+
+.light body, body.light { @apply bg-[#f4f4f7] text-[#1c1b22]; }
+
+.nsk-card {
+  @apply bg-nsk-surface border border-nsk-border rounded-2xl shadow-card;
+}
+
+.light .nsk-card { @apply bg-white border-[#e4e3ea]; }
+
+.nsk-btn-primary {
+  @apply bg-nsk-crimson hover:bg-nsk-crimson2 text-white font-medium transition-colors rounded-xl px-4 py-2.5 shadow-glow;
+}
+
+.nsk-btn-ghost {
+  @apply bg-transparent border border-nsk-border hover:border-nsk-crimson/50 hover:bg-nsk-surface2 text-nsk-ink transition-colors rounded-xl px-4 py-2.5;
+}
+
+.nsk-input {
+  @apply w-full bg-nsk-surface2 border border-nsk-border rounded-xl px-3.5 py-2.5 text-sm placeholder:text-nsk-muted outline-none focus:border-nsk-crimson/60 focus:ring-2 focus:ring-nsk-crimson/15 transition-all;
+}
+
+.light .nsk-input { @apply bg-[#f0eff5] border-[#e4e3ea]; }
+
+.nsk-chip {
+  @apply text-xs px-2.5 py-1 rounded-full border border-nsk-border bg-nsk-surface2 text-nsk-muted;
+}
+
+.nsk-scanline {
+  background-image: linear-gradient(180deg, rgba(200,30,58,0.06) 0%, transparent 100%);
+}
